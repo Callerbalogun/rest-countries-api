@@ -1,0 +1,53 @@
+@use "../../../scss/base/variables.scss" as vars;
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+  height: 19rem;
+  width: 15rem;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: vars.$White;
+  box-shadow: 0 0 2px vars.$Grey-200;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    background-color: vars.$Grey-100;
+  }
+
+  &__flag {
+    display: block;
+    width: 100%;
+    height: 8.5rem;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+    &__name {
+      font-size: vars.$font-size;
+      font-weight: vars.$font-weight-b;
+      color: vars.$Grey-950;
+      margin-bottom: 1rem;
+    }
+
+    &__population,
+    &__region,
+    &__capital {
+      margin: 2px;
+      font-size: vars.$font-size-sm;
+      font-weight: vars.$font-weight-b;
+      color: vars.$Grey-950;
+    }
+
+    &__details {
+      font-weight: vars.$font-weight;
+      font-size: vars.$font-size-sm;
+      color: vars.$Blue-950;
+    }
+  }
+}

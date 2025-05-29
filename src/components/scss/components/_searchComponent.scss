@@ -1,0 +1,42 @@
+@use "../../../scss/base/variables.scss" as vars;
+
+.search-container {
+  display: flex;
+  place-items: center;
+  background-color: vars.$White;
+  max-width: 22rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2px vars.$Grey-200;
+  overflow: hidden;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: vars.$Grey-300;
+    width: 5rem;
+    margin-right: 7px;
+    padding: 0.8rem;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  & input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: vars.$font-size;
+    font-weight: vars.$font-weight-m;
+    color: vars.$Grey-400;
+    background-color: inherit;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: vars.$Grey-200;
+      font-size: vars.$font-size-sm;
+      font-weight: vars.$font-weight-m;
+    }
+  }
+}

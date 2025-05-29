@@ -1,0 +1,66 @@
+@use "../../../scss/base/variables" as vars;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  .dropdown-toggle {
+    background-color: vars.$White;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 2px vars.$Grey-200;
+    padding: 1rem;
+    font-size: vars.$font-size-sm;
+    font-weight: vars.$font-weight-m;
+    cursor: pointer;
+    width: 12rem;
+
+    &:hover {
+      background-color: vars.$Grey-100;
+    }
+
+    .arrow {
+      margin-left: 0.5rem;
+      font-size: vars.$font-size-sm;
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: vars.$White;
+    border-radius: 0.5rem;
+    margin-top: 5px;
+    padding: 1rem 0;
+    height: 14rem;
+    width: 12rem;
+    box-shadow: 0 2px 4px vars.$Grey-300;
+    z-index: 10;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      top: 90%;
+    }
+
+    .dropdown-item {
+      font-size: vars.$font-size-sm;
+      font-weight: vars.$font-weight-m;
+      cursor: pointer;
+      padding: 0.3rem 2rem;
+
+      &:hover {
+        background-color: vars.$Grey-100;
+      }
+    }
+  }
+}

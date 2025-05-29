@@ -1,0 +1,55 @@
+@use "../../../scss/base/variables.scss" as vars;
+
+.search-filter-container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.country-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 0.5rem;
+
+  & span {
+    margin: 0 1rem;
+    font-size: vars.$font-size-sm;
+    font-weight: vars.$font-weight-m;
+    color: vars.$Grey-950;
+  }
+
+  & button {
+    display: flex;
+    background-color: vars.$White;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: vars.$Grey-950;
+    cursor: pointer;
+    box-shadow: 0 0 2px vars.$Grey-200;
+
+    &:hover {
+      background-color: vars.$Grey-100;
+    }
+
+    &:disabled {
+      background-color: vars.$Grey-300;
+      cursor: not-allowed;
+    }
+  }
+}

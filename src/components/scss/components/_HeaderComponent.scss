@@ -1,0 +1,42 @@
+@use "../../../scss/base/variables.scss" as vars;
+
+.header-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5rem;
+  background-color: vars.$White;
+  box-shadow: 0 0 4px vars.$Grey-300;
+
+  @media (min-width: 768px) {
+    height: 4rem;
+    padding-left: 4rem;
+  }
+
+  & h1 {
+    font-size: vars.$font-size;
+    font-weight: vars.$font-weight-b;
+    cursor: pointer;
+  }
+
+  &__btn {
+    display: flex;
+    place-items: center;
+    background-color: vars.$White;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: vars.$font-size-sm;
+    font-weight: vars.$font-weight-m;
+
+    &:hover {
+      background-color: vars.$Grey-100;
+    }
+
+    & span {
+      margin-left: 0.5rem;
+    }
+  }
+}

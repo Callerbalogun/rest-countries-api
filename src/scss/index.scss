@@ -1,0 +1,96 @@
+//base
+@use "./base/reset";
+@use "./base/variables.scss" as vars;
+
+//components
+@use "/src/components/scss/main.scss";
+
+//pages
+@use "/src/pages/scss/pagesMain.scss";
+
+#root {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: vars.$Grey-100;
+  padding-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    min-width: 1200px;
+    overflow-x: auto;
+  }
+}
+
+section {
+  padding: 1rem 1rem 0 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem 4rem 0 4rem;
+  }
+}
+
+#root.dark-mode {
+  background-color: vars.$Blue-950;
+  color: vars.$Grey-100;
+
+  .country-card,
+  .header-component,
+  .search-container,
+  .dropdown-toggle,
+  .dropdown-menu {
+    background-color: vars.$Blue-900;
+    color: vars.$Grey-100;
+    box-shadow: 0 0 4px vars.$Blue-950;
+  }
+
+  button {
+    background-color: vars.$Blue-900;
+    color: vars.$Grey-100;
+    box-shadow: 0 0 4px vars.$Blue-950;
+
+    &:hover {
+      background-color: vars.$Blue-800;
+    }
+  }
+
+  input,
+  .search-container__icon {
+    background-color: vars.$Blue-900;
+    color: vars.$Grey-100;
+    box-shadow: none;
+  }
+
+  p {
+    color: vars.$Grey-100;
+
+    & span {
+      color: vars.$Grey-200;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: vars.$Grey-100;
+  }
+
+  .details-page {
+    background-color: vars.$Blue-950;
+    color: vars.$Grey-100;
+    box-shadow: 0 0 4px vars.$Blue-950;
+  }
+
+  .pagination-container {
+    button:disabled {
+      background-color: vars.$Grey-600;
+    }
+  }
+
+  .dropdown-item:hover {
+    background-color: vars.$Blue-800;
+  }
+
+  .country-card:hover {
+    background-color: vars.$Blue-800;
+  }
+}

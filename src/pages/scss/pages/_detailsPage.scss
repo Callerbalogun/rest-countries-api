@@ -1,0 +1,121 @@
+@use "../../../scss/base/variables.scss" as vars;
+
+.display-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.4rem;
+  width: 6rem;
+  margin-bottom: 1rem;
+  background-color: vars.$White;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 4px vars.$Grey-200;
+  cursor: pointer;
+
+  &:hover {
+    background-color: vars.$Grey-100;
+  }
+}
+
+.details-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  &__flag {
+    display: block;
+    width: 19rem;
+    height: 14rem;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: vars.$font-size-lg;
+    font-weight: vars.$font-weight-b;
+    color: vars.$Grey-950;
+    margin: 2rem 0;
+  }
+
+  & p {
+    font-size: vars.$font-size-sm;
+    font-weight: vars.$font-weight-b;
+    color: vars.$Grey-950;
+    margin: 0.5rem 0;
+  }
+
+  & span {
+    font-size: vars.$font-size-sm;
+    font-weight: vars.$font-weight-m;
+    color: vars.$Blue-950;
+  }
+
+  &__currency-container {
+    margin-block: 2rem;
+  }
+
+  & h3 {
+    font-size: vars.$font-size;
+    font-weight: vars.$font-weight-b;
+    color: vars.$Grey-950;
+    margin-block: 0.5rem;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6rem;
+    padding: 0.4rem;
+    margin: 0.5rem;
+    background-color: vars.$White;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 4px vars.$Grey-200;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background-color: vars.$Grey-100;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .details-page {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+
+    &__flag {
+      width: 23rem;
+      height: 18rem;
+      object-fit: fill;
+    }
+
+    &__info {
+      margin-left: 4rem;
+      width: 100%;
+    }
+
+    &__info-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    &__name {
+      margin: 1.3rem 0;
+    }
+  }
+}
