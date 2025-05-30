@@ -26,7 +26,9 @@ const HeaderComponent: React.FC = () => {
 
   return (
     <header className="header-component">
-      <h1 onClick={() => window.location.replace("/")}>Where in the world?</h1>
+      <h1 onClick={() => window.location.replace(import.meta.env.BASE_URL)}>
+        Where in the world?
+      </h1>
       <button onClick={toggleDarkMode} className="header-component__btn">
         {darkMode ? <HiMoon /> : <HiOutlineMoon />}
         <span>Dark Mode</span>
