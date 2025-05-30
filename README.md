@@ -1,6 +1,6 @@
 # Overview
 
-Simple country infromation app
+Simple country information app
 
 ## Features
 
