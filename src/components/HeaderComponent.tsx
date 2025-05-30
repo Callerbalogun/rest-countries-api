@@ -26,7 +26,13 @@ const HeaderComponent: React.FC = () => {
 
   return (
     <header className="header-component">
-      <h1 onClick={() => window.location.replace(import.meta.env.BASE_URL)}>
+      <h1
+        onClick={() =>
+          window.location.replace(
+            window.location.origin + import.meta.env.BASE_URL
+          )
+        }
+      >
         Where in the world?
       </h1>
       <button onClick={toggleDarkMode} className="header-component__btn">
