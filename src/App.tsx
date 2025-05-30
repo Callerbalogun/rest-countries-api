@@ -9,7 +9,7 @@ function App() {
       <HeaderComponent />
       <section>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/*" element={<Homepage />} />
           <Route path="/details/:countryName" element={<DetailsPage />} />
         </Routes>
       </section>
