@@ -21,7 +21,7 @@ const DetailsPage: React.FC = () => {
   }
 
   if (!country) {
-    return <p>Country not found.</p>;
+    return <h1>Country not found.</h1>;
   }
 
   return (

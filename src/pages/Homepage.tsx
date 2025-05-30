@@ -70,13 +70,23 @@ const Homepage: React.FC = () => {
       </div>
       <div className="country-card-container">
         {isLoading ? (
-          <p>Loading...</p>
+          <div className="blank-container">
+            <div className="spinner"></div>
+            <h1>Loading...</h1>
+          </div>
+        ) : error ? (
+          <div className="blank-container">
+            <h1>Error fetching countries. Please try again.</h1>
+          </div>
+        ) : paginatedCountries.length === 0 ? (
+          <div className="blank-container">
+            <h2>No countries found for your search or filter.</h2>
+          </div>
         ) : (
           paginatedCountries.map((country) => (
             <CountryCard key={country.name.official} {...country} />
           ))
         )}
-        {error && <p>Error fetching countries. Please try again.</p>}
       </div>
       {totalPages > 1 && (
         <div className="pagination-container">

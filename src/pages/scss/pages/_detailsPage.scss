@@ -21,7 +21,6 @@
 .details-page {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 
   &__flag {
     display: block;
@@ -93,8 +92,9 @@
 @media (min-width: 768px) {
   .details-page {
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     padding: 0;
+    margin-top: 2rem;
 
     &__flag {
       width: 23rem;
@@ -111,7 +111,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     &__name {
