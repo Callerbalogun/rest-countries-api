@@ -58,14 +58,11 @@ const DetailsPage: React.FC = () => {
                 <p>
                   Sub Region: <span>{country.subregion}</span>
                 </p>
-                <p>
-                  Capital: <span>{country.capital}</span>
-                </p>
               </div>
             </div>
             <div className="details-page__currency-container">
               <p>
-                Top Level Domain: <span>{country.tld}</span>
+                Capital: <span>{country.capital}</span>
               </p>
               <p>
                 Currency:{" "}

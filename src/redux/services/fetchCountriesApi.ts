@@ -6,7 +6,8 @@ const fetchCountriesApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://restcountries.com/v3.1" }),
   endpoints: (builder) => ({
     getAllCountries: builder.query<Country[], number | void>({
-      query: () => "/all",
+      query: () =>
+        "/all?fields=name,capital,currencies,region,subregion,population,flags,cca3,languages,borders",
       transformResponse: (response: Country[], arg) => {
         if (typeof arg === "number") {
           return response.slice(0, arg);
