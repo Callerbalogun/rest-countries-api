@@ -16,6 +16,7 @@ const CountryCard: React.FC<Country> = ({ ...country }) => {
         src={country.flags.svg}
         alt={country.flags.alt || "Country Flag"}
         className="country-card__flag"
+        loading="lazy"
       />
       <div className="country-card__info">
         <h2 className="country-card__info__name"> {country.name.common} </h2>

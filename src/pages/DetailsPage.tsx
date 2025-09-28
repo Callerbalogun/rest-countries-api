@@ -35,6 +35,7 @@ const DetailsPage: React.FC = () => {
           src={country.flags.png}
           alt={country.flags.alt}
           className="details-page__flag"
+          loading="lazy"
         />
         <div className="details-page__info">
           <div className="details-page__info-top">
