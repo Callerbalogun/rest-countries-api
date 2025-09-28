@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useGetAllCountriesQuery } from "../redux/services/fetchCountriesApi";
-import FilterComponent from "../components/FilterComponent";
-import SearchComponent from "../components/SearchComponent";
-import CountryCard from "../components/CountryCard";
+import {
+  CountryCard,
+  FilterComponent,
+  Loader,
+  SearchComponent,
+} from "../components";
 import {
   HiChevronRight,
   HiChevronDoubleRight,
@@ -70,10 +73,7 @@ const Homepage: React.FC = () => {
       </div>
       <div className="country-card-container">
         {isLoading ? (
-          <div className="blank-container">
-            <div className="spinner"></div>
-            <h1>Loading...</h1>
-          </div>
+          <Loader />
         ) : error ? (
           <div className="blank-container">
             <h1>Error fetching countries. Please try again.</h1>
